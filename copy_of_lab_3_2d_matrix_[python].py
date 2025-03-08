@@ -36,8 +36,7 @@ If your function is wrong you will see wrong [correction percentage]
 Do not change the driver code statements. You can only change the input values to test your code.
 """
 
-#DO NOT CHANGE THE CODE BELOW
-#You must run this cell to print matrix and for the driver code to work
+
 def print_matrix(m):
   row,col = m.shape
   for i in range(row):
@@ -68,7 +67,7 @@ def walk_zigzag(floor):
            if row % 2 == 0:
             print(floor[row,col],end=" ")
     print()
-#DO NOT CHANGE THE CODE BELOW
+
 floor = np.array([[ '3' , '8' , '4' , '6' , '1'],
                   ['7' , '2' , '1' , '9' , '3'],
                   ['9' , '0' , '7' , '5' , '8'],
@@ -155,7 +154,7 @@ def row_rotation(exam_week, seat_status):
             print(s,end=" ")
         print()
     return aa_row
-#DO NOT CHANGE THE CODE BELOW
+
 seat_status = np.array([[ 'A' , 'B' , 'C' , 'D' , 'E'],
                   ['F' , 'G' , 'H' , 'I' , 'J'],
                   ['K' , 'L' , 'M' , 'N' , 'O'],
@@ -180,7 +179,7 @@ def compress_matrix(mat):
         comp[i//2][j//2]=(mat[i][j] + mat[i][j + 1] +mat[i + 1][j] + mat[i + 1][j + 1])
   return comp
 
-#DO NOT CHANGE THE CODE BELOW
+
 matrix=np.array([[1,2,3,4],
                  [5,6,7,8],
                  [1,3,5,2],
@@ -221,7 +220,7 @@ def play_game(arena):
         print("points Gained:",total_points,"Your team has survived the game.")
     else:
          print("points Gained:",total_points,"Your team out.")
-#DO NOT CHANGE THE CODE BELOW
+
 arena=np.array([[0,2,2,0],
                 [50,1,2,0],
                 [2,2,2,0],

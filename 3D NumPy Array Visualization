@@ -1,0 +1,52 @@
+import numpy as np
+
+arr3D = np.array( [
+    [
+        [10,50,34],
+        [29,20,21],
+        [15,24,53]
+    ],
+    [
+        [30,45,14],
+        [23,28,21],
+        [51,37,43]
+    ],
+    [
+        [42,35,25],
+        [39,32,27],
+        [48,40,12]
+    ]
+    ])
+
+print( arr3D )
+print( "\nAs you can see its difficult to visualize 3D Matrix." )
+print( "With the help of few python ilbries we can visualize it better.\n" )
+
+# The code below is for visualization only #
+import plotly.graph_objects as go
+
+# Create meshgrid for 3D plot
+x, y, z = np.indices( arr3D.shape )
+
+# Create a 3D scatter plot with Plotly
+fig = go.Figure(data=go.Scatter3d(
+    x=x.flatten(), y=y.flatten(), z=z.flatten(),
+    mode='markers',
+    marker=dict(
+        size=10,
+        color=arr3D.flatten(),  # Set color based on the values in the array
+        colorscale='Viridis',   # Color map
+        opacity=0.8
+    )
+))
+
+fig.update_layout(
+    scene=dict(
+        xaxis_title='X Axis',
+        yaxis_title='Y Axis',
+        zaxis_title='Z Axis',
+    ),
+    title='3D NumPy Array Visualization'
+)
+
+fig.show()
